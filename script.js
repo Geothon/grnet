@@ -53,8 +53,3 @@ else if(playerchoice==paper & aichoice==paper) {console.log ("tie")}
 
 else if(playerchoice==sissors & aichoice==sissors) {console.log ("tie")}
 };
- 
-game()
-console.log("test")
-console.log(playerchoice)
-console.log(aichoice)
