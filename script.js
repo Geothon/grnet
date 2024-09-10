@@ -1,17 +1,17 @@
-let playerchoice = ""
+let playerchoice
 
-let aichoice = ""
+let aichoice
 
 function rock() {
-let playerchoice = "rock"    
+ playerchoice = "rock"    
 }
 
 function paper() {
-let playerchoice = "paper"
+playerchoice = "paper"
 }
 
 function sissors() {
-let playerchoice = "sissors"
+playerchoice = "sissors"
 }
 
 function getRandomInt(max) {
@@ -19,6 +19,8 @@ function getRandomInt(max) {
   }
 
 let number = getRandomInt (3)
+
+console.log(number)
 
 if(number==1) {
 aichoice = "rock"    
@@ -50,6 +52,9 @@ else if(playerchoice==paper & aichoice==sissors) {console.log ("ai win")}
 else if(playerchoice==paper & aichoice==paper) {console.log ("tie")}
 
 else if(playerchoice==sissors & aichoice==sissors) {console.log ("tie")}
- }
+};
  
- game()
+game()
+console.log("test")
+console.log(playerchoice)
+console.log(aichoice)
