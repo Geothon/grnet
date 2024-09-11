@@ -57,6 +57,4 @@ else if(playerchoice==paper && aichoice==sissors) {console.log ("ai win")}
 else if(playerchoice==paper && aichoice==paper) {console.log ("tie")}
 
 else if(playerchoice==sissors && aichoice==sissors) {console.log ("tie")}
-
-else {console.log("Somethings wrong")}
 };
