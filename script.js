@@ -4,16 +4,19 @@ let number
 
 function rock() {
  playerchoice = "rock"
+ newNum()
  game()
 }
 
 function paper() {
 playerchoice = "paper"
+newNum()
 game()
 }
 
 function sissors() {
 playerchoice = "sissors"
+newNum()
 game()
 }
 
@@ -22,7 +25,7 @@ function getRandomInt(max) {
   }
 
 function newNum() {
-  number = getRandomInt (3)
+  number = getRandomInt(3)
 }
 
 console.log(number)
@@ -57,4 +60,6 @@ else if(playerchoice == paper && aichoice == sissors) {console.log("ai win")}
 else if(playerchoice == paper && aichoice == paper) {console.log("tie")}
 
 else if(playerchoice == sissors && aichoice == sissors) {console.log("tie")}
+
+else {console.log("Error")}
 };
