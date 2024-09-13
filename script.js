@@ -1,6 +1,7 @@
 let playerchoice
 let aichoice
 let number
+let outputDisplay = document.getElementById("output-display")
 
 function rock() {
  playerchoice = "rock"
@@ -25,7 +26,7 @@ function getRandomInt(max) {
   }
 
 function newNum() {
-  number = getRandomInt(3)
+  number = getRandomInt(4)
 
   if(number == 1) {
   aichoice = "rock"    
@@ -40,24 +41,28 @@ function newNum() {
  }
 }
 
+function output(text) {
+  outputDisplay.innerHTML = text
+}
+
  function game() {
-if(playerchoice == "rock" && aichoice =="rock") {console.log("tie")}
+if(playerchoice == "rock" && aichoice =="rock") {output("tie")}
  
-else if(playerchoice == "rock" && aichoice == "paper") {console.log("ai win")}
+else if(playerchoice == "rock" && aichoice == "paper") {output("ai win")}
 
-else if(playerchoice == "rock" && aichoice == "sissors") {console.log("player win")}
+else if(playerchoice == "rock" && aichoice == "sissors") {output("player win")}
 
-else if(playerchoice == "paper" && aichoice == "rock") {console.log("player win")}
+else if(playerchoice == "paper" && aichoice == "rock") {output("player win")}
 
-else if(playerchoice == "sissors" && aichoice == "rock") {console.log("ai win")}
+else if(playerchoice == "sissors" && aichoice == "rock") {output("ai win")}
 
-else if(playerchoice == "sissors" && aichoice == "paper") {console.log("player win")}
+else if(playerchoice == "sissors" && aichoice == "paper") {output("player win")}
 
-else if(playerchoice == "paper" && aichoice == "sissors") {console.log("ai win")}
+else if(playerchoice == "paper" && aichoice == "sissors") {output("ai win")}
 
-else if(playerchoice == "paper" && aichoice == "paper") {console.log("tie")}
+else if(playerchoice == "paper" && aichoice == "paper") {output("tie")}
 
-else if(playerchoice == "sissors" && aichoice == "sissors") {console.log("tie")}
+else if(playerchoice == "sissors" && aichoice == "sissors") {output("tie")}
 
-else {console.log("Error")}
+else {output("Error")}
 };
